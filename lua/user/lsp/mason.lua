@@ -1,10 +1,12 @@
 local status_ok, mason = pcall(require, "mason")
 if not status_ok then
+  print("Mason not found")
   return
 end
 
 local status_ok_1, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok_1 then
+  print("Mason LSP Config not found")
   return
 end
 
@@ -13,10 +15,7 @@ local servers = {
   "cssmodules_ls",
   "emmet_ls",
   "html",
-  "jdtls",
   "jsonls",
-  "solc",
-  "solidity_ls",
   "sumneko_lua",
   "tflint",
   "terraformls",
@@ -26,9 +25,7 @@ local servers = {
   "bashls",
   "clangd",
   "rust_analyzer",
-  "taplo",
-  "zk@v0.10.1",
-  "lemminx"
+  "taplo"
 }
 
 local settings = {
@@ -106,23 +103,9 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
-  if server == "solc" then
-    local solc_opts = require "user.lsp.settings.solc"
-    opts = vim.tbl_deep_extend("force", solc_opts, opts)
-  end
-
   if server == "emmet_ls" then
     local emmet_ls_opts = require "user.lsp.settings.emmet_ls"
     opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
-  end
-
-  if server == "zk" then
-    local zk_opts = require "user.lsp.settings.zk"
-    opts = vim.tbl_deep_extend("force", zk_opts, opts)
-  end
-
-  if server == "jdtls" then
-    goto continue
   end
 
   if server == "rust_analyzer" then

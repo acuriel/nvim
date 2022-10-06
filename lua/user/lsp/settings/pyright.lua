@@ -1,8 +1,8 @@
 return {
-  cmd = { "py" },
   settings = {
     python = {
       analysis = {
+        venvPath = "/Users/aryan/Library/Caches/pypoetry/virtualenvs/",
         typeCheckingMode = "basic",
         diagnosticMode = "workspace",
         inlayHints = {

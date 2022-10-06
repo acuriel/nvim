@@ -90,8 +90,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-emoji"
   use "hrsh7th/cmp-nvim-lua"
   use "zbirenbaum/copilot-cmp"
-  use { "tzachar/cmp-tabnine", commit = "1a8fd2795e4317fd564da269cc64a2fa17ee854e", 
-run = "./install.sh" }
 
   -- Snippet
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -134,6 +132,7 @@ run = "./install.sh" }
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   -- use "lunarvim/colorschemes"
+  use 'marko-cerovac/material.nvim' -- Material https://github.com/marko-cerovac/material.nvim
 
   -- Utility
   use "rcarriga/nvim-notify"
@@ -144,7 +143,7 @@ run = "./install.sh" }
   use "lalitmee/browse.nvim"
 
   -- Registers
-  use "tversteeg/registers.nvim"
+  -- use "tversteeg/registers.nvim"
 
   -- Icon
   use "kyazdani42/nvim-web-devicons"
