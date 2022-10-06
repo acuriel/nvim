@@ -165,12 +165,10 @@ local mappings = {
 
   -- s = {
   --   name = "Split",
-  --   s = { "<cmd>split<cr>", "HSplit" },
-  --   v = { "<cmd>vsplit<cr>", "VSplit" },
   -- },
 
   s = {
-    name = "Session",
+    name = "Split & Session",
     s = { "<cmd>SaveSession<cr>", "Save" },
     r = { "<cmd>RestoreSession<cr>", "Restore" },
     x = { "<cmd>DeleteSession<cr>", "Delete" },
@@ -180,6 +178,8 @@ local mappings = {
     -- a = { ":RestoreSession<cr>", "test" },
     -- a = { ":RestoreSessionFromFile<cr>", "test" },
     -- a = { ":DeleteSession<cr>", "test" },
+    h = { "<cmd>split<cr>", "HSplit" },
+    v = { "<cmd>vsplit<cr>", "VSplit" },
   },
 
   r = {
@@ -221,9 +221,9 @@ local mappings = {
     l = { "<cmd>Telescope resume<cr>", "Last Search" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
-    R = { "<cmd>Telescope registers<cr>", "Registers" },
+    -- R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    -- C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
   g = {
