@@ -132,6 +132,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   -- use "lunarvim/colorschemes"
+  use 'marko-cerovac/material.nvim' -- Material https://github.com/marko-cerovac/material.nvim
 
   -- Utility
   use "rcarriga/nvim-notify"
